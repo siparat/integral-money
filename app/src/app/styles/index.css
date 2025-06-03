@@ -1,6 +1,29 @@
+:root {
+	--primary: #121E6C;
+	--primary-light: #0F5BFF;
+	--secondary: #C8D9FF;
+	--gray: #666666
+}
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Arial';
+	font-family: "Montserrat", sans-serif;
+	color: var(--primary)
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
 }
