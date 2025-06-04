@@ -1,0 +1,24 @@
+.form {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.error {
+	color: red;
+}
+
+.toggleMessage {
+	font-size: 21px;
+	color: var(--gray);
+	margin-top: 4px;
+	text-align: center;
+}
+
+
+.toggleMessage button {
+	font-size: 21px;
+	color: var(--primary-light);
+}
+

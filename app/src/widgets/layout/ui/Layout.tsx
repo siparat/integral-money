@@ -6,8 +6,8 @@ import { Header } from './Header/ui/Header';
 export const Layout = (): JSX.Element => {
 	return (
 		<div className={styles.container}>
-			<Header />
-			<main>
+			<Header className={styles.header} />
+			<main className={styles.content}>
 				<Outlet />
 			</main>
 		</div>

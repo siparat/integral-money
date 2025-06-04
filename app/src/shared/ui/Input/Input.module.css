@@ -1,0 +1,22 @@
+.input {
+	background: #ffffff;
+	color: var(--primary);
+	border-radius: 5px;
+	border: 1px solid var(--primary-light);
+	color: var(--primary);
+	font-size: 25px;
+	padding: 10px 15px;
+	width: 100%;
+}
+
+.label {
+	display: block;
+	font-size: 25px;
+	margin-bottom: 15px;
+}
+
+.error {
+	color: red;
+	font-size: 18px;
+	margin-top: 5px;
+}
