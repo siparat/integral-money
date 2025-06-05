@@ -10,10 +10,6 @@ export const headerMenu: NavItem[] = [
 		path: Routes.FIXED_COSTS
 	},
 	{
-		label: 'Помощь',
-		path: Routes.HELP
-	},
-	{
 		label: 'Найти специалиста',
 		path: Routes.ORDER_SERVICE
 	},

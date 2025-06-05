@@ -3,6 +3,8 @@ import { compare, hash } from 'bcrypt';
 
 export class UserEntity {
 	id?: string;
+	createdAt?: Date;
+	updatedAt?: Date;
 	email: string;
 	name: string;
 	passwordHash: string;
@@ -10,6 +12,8 @@ export class UserEntity {
 
 	constructor(user: IUserEntity) {
 		this.id = user.id;
+		this.createdAt = user.createdAt;
+		this.updatedAt = user.updatedAt;
 		this.email = user.email;
 		this.name = user.name;
 		this.passwordHash = user.passwordHash;

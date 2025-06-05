@@ -18,4 +18,9 @@ export class UserRepository {
 	findByEmail(email: string): Promise<User | null> {
 		return this.database.user.findUnique({ where: { email } });
 	}
+
+	update(entity: UserEntity): Promise<User> {
+		const { id, ...data } = entity;
+		return this.database.user.update({ where: { id }, data });
+	}
 }
