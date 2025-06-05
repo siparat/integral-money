@@ -3,12 +3,13 @@ import { useRef, type JSX } from 'react';
 import styles from '../../styles.module.css';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { type RegisterDto } from '../model/types';
-import { useAuthStore } from '@/entities/user';
+import { useAuthStore, useUserStore } from '@/entities/user';
 import { useNavigate } from 'react-router-dom';
 import { useAuthFormStore } from '@/features/auth/model/store';
 
 export const RegisterForm = (): JSX.Element => {
 	const signUp = useAuthStore((state) => state.signUp);
+	const fetchUserInfo = useUserStore((state) => state.fetchUserInfo);
 	const toggleAuthMethod = useAuthFormStore((state) => state.toggleAuthMethod);
 	const navigate = useNavigate();
 
@@ -26,7 +27,8 @@ export const RegisterForm = (): JSX.Element => {
 		}
 		try {
 			await signUp(data);
-			await navigate(Routes.MAIN);
+			await fetchUserInfo();
+			await navigate(Routes.MAIN, { replace: true });
 		} catch (error) {
 			if (error instanceof Error) {
 				setError('root', { message: error.message });
