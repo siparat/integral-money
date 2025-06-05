@@ -1,0 +1,11 @@
+.actions {
+	display: flex;
+	align-items: center;
+	gap: 45px;
+}
+
+.actions li > * {
+	color: var(--primary);
+	font-size: 18px;
+	font-weight: 400;
+}
