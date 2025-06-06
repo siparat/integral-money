@@ -5,6 +5,8 @@ import { Routes } from '@/shared';
 import { AuthPage } from '@/pages/auth';
 import { ProfilePage } from '@/pages/profile';
 import { ProtectedRoute } from './ProtectedRoute';
+import { SubscribesPage } from '@/pages/subscribes';
+import { OrderService } from '@/pages/order-service';
 
 export const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -23,6 +25,22 @@ export const router = createBrowserRouter(
 				element={
 					<ProtectedRoute>
 						<ProfilePage />
+					</ProtectedRoute>
+				}
+			/>
+			<Route
+				path={Routes.SUBSCRIBES}
+				element={
+					<ProtectedRoute>
+						<SubscribesPage />
+					</ProtectedRoute>
+				}
+			/>
+			<Route
+				path={Routes.ORDER_SERVICE}
+				element={
+					<ProtectedRoute>
+						<OrderService />
 					</ProtectedRoute>
 				}
 			/>
