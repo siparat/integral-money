@@ -9,6 +9,10 @@
 	margin-bottom: 28px;
 }
 
+:root[data-theme="dark"] .description {
+	color: #C8D9FF;
+}
+
 .element {
 	display: flex;
 	flex-direction: row-reverse;
@@ -23,6 +27,10 @@
 
 .element:nth-child(even) {
 	flex-direction: row;
+}
+
+:root[data-theme="dark"] .avatarWrapper {
+	box-shadow: 0px 0px 7px #C8D9FF;
 }
 
 .avatarWrapper {
@@ -76,6 +84,10 @@
 .property {
 	display: flex;
 	gap: 15px;
+}
+
+:root[data-theme="dark"] .property > p {
+	color: #C8D9FF;
 }
 
 .property > p {

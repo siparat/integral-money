@@ -12,6 +12,36 @@ services:
       - "--bind_ip_all"
     volumes:
       - mongodb_data:/data/db
+    networks:
+      - main
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: ./app
+    container_name: app
+    depends_on:
+      - database
+    ports:
+      - 80:80
+    networks:
+      - main
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: ./api
+    container_name: api
+    depends_on:
+      - database
+    ports:
+      - 3000:3000
+    networks:
+      - main
+    volumes:
+      - ./.env:/opt/app/.env
+
+networks:
+  main:
+    driver: bridge
 
 volumes:
   mongodb_data:

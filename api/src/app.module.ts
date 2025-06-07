@@ -6,6 +6,7 @@ import { DatabaseModule } from './database/database.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { path } from 'app-root-path';
+import { FixedCostModule } from './fixed-cost/fixed-cost.module';
 
 @Module({
 	imports: [
@@ -13,6 +14,7 @@ import { path } from 'app-root-path';
 		AuthModule,
 		DatabaseModule,
 		ConfigModule.forRoot({ isGlobal: true }),
+		FixedCostModule,
 		ServeStaticModule.forRoot({
 			rootPath: `${join(path, 'uploads')}`,
 			serveRoot: '/uploads',

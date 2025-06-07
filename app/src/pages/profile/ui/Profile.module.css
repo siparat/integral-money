@@ -48,6 +48,10 @@
 	margin-top: 42px;
 }
 
+:root[data-theme="dark"] .content > div p {
+	color: #C8D9FF;
+}
+
 .avatarAction > input {
 	display: none;
 }

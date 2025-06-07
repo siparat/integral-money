@@ -24,6 +24,10 @@
 	justify-content: space-between;
 }
 
+:root[data-theme="dark"] .element {
+	box-shadow: 0px 0px 7px #C8D9FF
+}
+
 .advantages {
 	position: absolute;
 	top: 50%;
@@ -40,6 +44,12 @@
 .advantages li {
 	text-align: center;
 	color: var(--gray);
+	font-size: 21px;
+}
+
+:root[data-theme="dark"] .advantages li {
+	text-align: center;
+	color: #C8D9FF;
 	font-size: 21px;
 }
 

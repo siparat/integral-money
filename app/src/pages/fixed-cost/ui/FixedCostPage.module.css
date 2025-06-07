@@ -1,0 +1,16 @@
+.page {
+	margin-block: 30px;
+}
+
+.triggerButton {
+	text-align: center;
+	padding-block: 32px;
+	cursor: pointer;
+}
+
+.costsWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin-top: 40px;
+}

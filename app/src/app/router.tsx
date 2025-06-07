@@ -7,6 +7,7 @@ import { ProfilePage } from '@/pages/profile';
 import { ProtectedRoute } from './ProtectedRoute';
 import { SubscribesPage } from '@/pages/subscribes';
 import { OrderService } from '@/pages/order-service';
+import { FixedCostPage } from '@/pages/fixed-cost';
 
 export const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -41,6 +42,14 @@ export const router = createBrowserRouter(
 				element={
 					<ProtectedRoute>
 						<OrderService />
+					</ProtectedRoute>
+				}
+			/>
+			<Route
+				path={Routes.FIXED_COSTS}
+				element={
+					<ProtectedRoute>
+						<FixedCostPage />
 					</ProtectedRoute>
 				}
 			/>

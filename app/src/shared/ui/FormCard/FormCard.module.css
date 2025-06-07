@@ -6,6 +6,10 @@
 	width: 100%;
 }
 
+:root[data-theme="dark"] .formCard {
+	box-shadow: 0px 0px 7px #C8D9FF
+}
+
 .title {
 	font-size: 33px;
 	font-weight: 400;

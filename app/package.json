@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.14",
     "@tanstack/react-query": "^5.80.3",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.13",

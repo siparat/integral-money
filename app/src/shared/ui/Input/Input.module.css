@@ -20,3 +20,8 @@
 	font-size: 18px;
 	margin-top: 5px;
 }
+
+:root[data-theme="dark"] .input {
+	background: none;
+	border-color: #C8D9FF;
+}

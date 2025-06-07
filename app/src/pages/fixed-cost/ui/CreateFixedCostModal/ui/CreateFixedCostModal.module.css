@@ -1,0 +1,59 @@
+.content {
+	max-width: 412px;
+}
+
+.title {
+	font-size: 21px;
+	font-weight: 400;
+	color: var(--primary);
+}
+
+.inputTitle {
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--primary-light);
+	width: 100%;
+}
+
+.openButton {
+	width: 100%;
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--gray);
+	border-block: 1px solid var(--primary-light);
+	border-inline: none;
+	padding-block: 5px;
+	margin-top: 5px;
+	cursor: pointer;
+	appearance: none;
+	background: none;
+	outline: none;
+}
+
+input.openButton[type="date"]::-webkit-calendar-picker-indicator {
+	background-color: var(--gray);
+}
+
+.element {
+	width: 100%;
+	margin-top: 5px;
+}
+
+.element:first-of-type {
+	margin-top: 10px;
+}
+
+.button {
+	max-width: 240px;
+	margin: 21px auto 0;
+	display: block;
+	padding: 12px 48px;
+	font-size: 21px;
+}
+
+.error {
+	font-size: 16px;
+	font-weight: 400;
+	color: red;
+	margin-top: 5px;
+}

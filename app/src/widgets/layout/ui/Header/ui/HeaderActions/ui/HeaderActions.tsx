@@ -4,9 +4,11 @@ import { NavLink } from 'react-router-dom';
 import cn from 'classnames';
 import { Routes } from '@/shared';
 import { useAuthStore } from '@/entities/user';
+import { useThemeStore } from '@/shared/model/theme-store';
 
 export const HeaderActions = ({ className, ...props }: HTMLAttributes<HTMLUListElement>): JSX.Element => {
 	const token = useAuthStore((state) => state.token);
+	const switchTheme = useThemeStore((state) => state.switchTheme);
 
 	return (
 		<ul className={cn(className, styles.actions)} {...props}>
@@ -21,7 +23,7 @@ export const HeaderActions = ({ className, ...props }: HTMLAttributes<HTMLUListE
 			)}
 
 			<li>
-				<button>Сменить тему</button>
+				<button onClick={switchTheme}>Сменить тему</button>
 			</li>
 		</ul>
 	);
