@@ -7,12 +7,14 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { path } from 'app-root-path';
 import { FixedCostModule } from './fixed-cost/fixed-cost.module';
+import { OperationModule } from './operation/operation.module';
 
 @Module({
 	imports: [
 		UserModule,
 		AuthModule,
 		DatabaseModule,
+		OperationModule,
 		ConfigModule.forRoot({ isGlobal: true }),
 		FixedCostModule,
 		ServeStaticModule.forRoot({

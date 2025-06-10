@@ -7,4 +7,5 @@ model User {
     avatar       String?
     passwordHash String
     costs        FixedCost[]
+    operations   Operation[]
 }

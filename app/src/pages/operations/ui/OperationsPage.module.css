@@ -1,0 +1,149 @@
+.page {
+	padding-block: 100px 30px;
+}
+
+.wrapper {
+	display: flex;
+	gap: 30px;
+	width: 100%;
+}
+
+.actions {
+	flex-shrink: 0;
+	max-width: 300px;
+	width: 100%;
+	height: 355px;
+	box-shadow: 0px 0px 4px rgba(0,0,0, .25);
+	border-radius: 25px;
+	padding: 30px 25px;
+}
+
+:root[data-theme="dark"] .actions {
+	box-shadow: 0px 0px 5px #C8D9FF;
+}
+
+.actionTitle {
+	font-weight: 400;
+	font-size: 21px;
+	color: var(--primary);
+}
+
+.actionButtons {
+	margin-top: 54px;
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+}
+
+.actionButtons button {
+	font-weight: 400;
+	font-size: 21px;
+	padding-block: 12px;
+}
+
+.diagrams {
+	flex-grow: 1;
+}
+
+.diagramsPie {
+	display: flex;
+}
+
+.params {
+	flex-shrink: 0;
+	color: var(--gray);
+	max-width: 240px;
+	width: 100%;
+}
+
+:root[data-theme="dark"] .params {
+	color: #C8D9FF;
+}
+
+.params * {
+	color: inherit;
+}
+
+.params svg path {
+	stroke: #C8D9FF;
+}
+
+.diagramChanger {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.diagramChanger button {
+	padding: 5px 10px;
+}
+
+.diagramChanger p {
+	margin-bottom: 5px;
+}
+
+.dateChanger {
+	margin-top: 25px;
+	position: relative;	
+}
+
+.dateValue {
+	width: 100%;
+	border-bottom: 1px solid var(--gray);
+	padding: 5px;
+	margin-top: 5px;
+}
+
+:root[data-theme="dark"] .dateValue {
+	border-bottom: 1px solid #C8D9FF;
+}
+
+.calendar {
+	position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+:root[data-theme="dark"] .calendar {
+	border: 1px solid #C8D9FF;
+}
+
+.operations {
+	margin-top: 50px;
+	border-top: 1px solid var(--gray);
+}
+
+:root[data-theme="dark"] .operations {
+	border-top: 1px solid #C8D9FF;
+}
+
+.operationsTitle {
+	font-weight: 400;
+	font-size: 21px;
+	color: var(--primary);
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.emptyMessage {
+	margin-top: 40px;
+	text-align: center;
+	width: 100%;
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--gray);
+}
+
+:root[data-theme="dark"] .emptyMessage {
+	color: #C8D9FF;
+}
+
+.operationsCards {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}

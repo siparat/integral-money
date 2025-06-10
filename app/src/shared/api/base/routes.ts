@@ -5,5 +5,9 @@ export enum BaseApiRoutes {
 	UPDATE_AVATAR = 'user/avatar',
 	FIXED_COST = 'fixed-cost',
 	DELETE_FIXED_COST = 'fixed-cost/:id',
-	GET_FIXED_COST_TYPES = 'fixed-cost/types'
+	CREATE_OPERATION = 'operation',
+	DELETE_OPERATION = 'operation/:id',
+	SEARCH_OPERATIONS = 'operation/search',
+	GET_FIXED_COST_TYPES = 'fixed-cost/types',
+	GET_ALL_CATEGORIES = 'operation/all-categories'
 }

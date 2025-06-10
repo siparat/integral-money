@@ -1,5 +1,6 @@
 export enum LocalStorageKeys {
 	ACCESS_TOKEN = 'access-token',
 	THEME = 'theme',
-	FIXED_COST_TYPES = 'fixed-cost-types'
+	FIXED_COST_TYPES = 'fixed-cost-types',
+	OPERATION_CATEGORIES = 'operation-categories'
 }

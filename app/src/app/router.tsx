@@ -1,5 +1,4 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-import { HomePage } from '../pages/home';
 import { Layout } from '../widgets/layout';
 import { Routes } from '@/shared';
 import { AuthPage } from '@/pages/auth';
@@ -8,6 +7,7 @@ import { ProtectedRoute } from './ProtectedRoute';
 import { SubscribesPage } from '@/pages/subscribes';
 import { OrderService } from '@/pages/order-service';
 import { FixedCostPage } from '@/pages/fixed-cost';
+import { OperationsPage } from '@/pages/operations';
 
 export const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -16,7 +16,7 @@ export const router = createBrowserRouter(
 				index
 				element={
 					<ProtectedRoute>
-						<HomePage />
+						<OperationsPage />
 					</ProtectedRoute>
 				}
 			/>
