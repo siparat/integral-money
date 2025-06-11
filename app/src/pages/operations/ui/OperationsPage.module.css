@@ -106,6 +106,7 @@
     border: 1px solid var(--gray);
     border-radius: 10px;
     overflow: hidden;
+	z-index: 100000;
 }
 
 :root[data-theme="dark"] .calendar {
@@ -146,4 +147,78 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+}
+
+.diagramsMobile {
+	display: none;
+}
+
+@media (max-width: 1300px) {
+	.diagramsMobile {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-top: 40px;
+	}
+	
+	.diagramsDesktop {
+		display: none;
+	}
+
+	.page {
+		padding-block: 50px;
+	}
+	
+	
+	.actions {
+		flex-basis: 50%;
+		max-width: none;
+		height: auto;
+	}
+
+	.diagramsPie {
+		flex-direction: row;
+	}
+	
+	.params {
+		flex-basis: calc(50% - 50px);
+		max-width: none;
+	}
+}
+
+@media (max-width: 800px) {
+	.actionButtons {
+		margin-top: 20px;
+		gap: 20px;
+	}
+}
+
+@media (max-width: 700px) {
+	.actionButtons {
+		margin-top: 20px;
+		gap: 20px;
+	}
+
+	.actionButtons button {
+		font-size: 16px;
+    	padding-block: 8px;
+	}
+
+	.actionTitle {
+		font-size: 16px;
+	}
+
+	.dateChanger > p, .diagramChanger > p {
+		font-size: 14px;
+	} 
+}
+
+@media (max-width: 600px) {
+	.wrapper {
+		flex-direction: column;
+	}
+
+	.operationsTitle {
+		font-size: 18px;
+	}
 }

@@ -1,6 +1,6 @@
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
-import { useEffect, useState, type JSX } from 'react';
+import { useEffect, useMemo, useState, type JSX } from 'react';
 import styles from './OperationsPage.module.css';
 import { Button } from '@/shared';
 import ArrowIcon from '@/shared/assets/icons/arrow-left.svg?react';
@@ -65,6 +65,20 @@ export const OperationsPage = (): JSX.Element => {
 		}
 	}, [dateRange]);
 
+	const chart = useMemo(() => {
+		return chartType == 'linear' ? (
+			<>
+				<LinearChart type={OperationType.INCOME} />
+				<LinearChart type={OperationType.EXPENSE} />
+			</>
+		) : (
+			<>
+				<PieOperationsChart type={OperationType.INCOME} />
+				<PieOperationsChart type={OperationType.EXPENSE} />
+			</>
+		);
+	}, [chartType]);
+
 	return (
 		<>
 			<Helmet>
@@ -82,22 +96,8 @@ export const OperationsPage = (): JSX.Element => {
 							</Root>
 						</div>
 					</div>
-					<div className={cn(styles.diagrams, { [styles.diagramsPie]: chartType == 'pie' })}>
-						{operations.length ? (
-							chartType == 'linear' ? (
-								<>
-									<LinearChart type={OperationType.INCOME} />
-									<LinearChart type={OperationType.EXPENSE} />
-								</>
-							) : (
-								<>
-									<PieOperationsChart type={OperationType.INCOME} />
-									<PieOperationsChart type={OperationType.EXPENSE} />
-								</>
-							)
-						) : (
-							<p className={styles.emptyMessage}>Доходов и расходов нет</p>
-						)}
+					<div className={cn(styles.diagrams, styles.diagramsDesktop, { [styles.diagramsPie]: chartType == 'pie' })}>
+						{operations.length ? chart : <p className={styles.emptyMessage}>Доходов и расходов нет</p>}
 					</div>
 					<div className={styles.params}>
 						<div className={styles.diagramChanger}>
@@ -119,6 +119,9 @@ export const OperationsPage = (): JSX.Element => {
 							)}
 						</div>
 					</div>
+				</div>
+				<div className={cn(styles.diagrams, styles.diagramsMobile, { [styles.diagramsPie]: chartType == 'pie' })}>
+					{operations.length && chart}
 				</div>
 				<div className={styles.operations}>
 					<h2 className={styles.operationsTitle}>Ваши введенные доходы и расходы:</h2>

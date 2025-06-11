@@ -30,7 +30,7 @@ export const FixedCostPage = (): JSX.Element => {
 
 				<div className={styles.costsWrapper}>
 					{costs.length ? (
-						costs.map((c) => <FixedCostCard data={c} />)
+						costs.map((c) => <FixedCostCard key={c.id} data={c} />)
 					) : (
 						<p className={styles.emptyMessage}>У вас нет постоянных расходов!</p>
 					)}
