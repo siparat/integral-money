@@ -12,7 +12,7 @@ export const AuthPage = (): JSX.Element => {
 			<Helmet>
 				<title>Авторизация | Интеграл + Money</title>
 			</Helmet>
-			<div className={styles.authPage}>{authMethod == AuthFormMethod.LOGIN ? <LoginForm /> : <RegisterForm />}</div>;
+			<div className={styles.authPage}>{authMethod == AuthFormMethod.LOGIN ? <LoginForm /> : <RegisterForm />}</div>
 		</>
 	);
 };

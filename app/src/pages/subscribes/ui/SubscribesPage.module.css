@@ -1,5 +1,5 @@
 .page {
-	padding: 45px 90px;
+	padding: 45px 0;
 	display: flex;
 	gap: 80px;
 }
@@ -48,9 +48,7 @@
 }
 
 :root[data-theme="dark"] .advantages li {
-	text-align: center;
 	color: #C8D9FF;
-	font-size: 21px;
 }
 
 .cost {
@@ -66,3 +64,54 @@
     display: block;
 }
 
+@media (max-width: 1600px) {
+	.page {
+		gap: 50px;
+	}
+
+	.element {
+		padding: 40px 20px 60px;
+		width: 400px;
+	}
+}
+
+@media (max-width: 1400px) {
+	.page {
+		gap: 30px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.element {
+		padding: 40px 20px 60px;
+		width: 300px;
+		height: 500px;
+	}
+
+	.title {
+		font-size: 21px;
+	}
+
+	.advantages {
+		top: 40%;
+		gap: 20px;
+	}
+
+	ul.advantages li {
+		font-size: 16px;
+	}
+
+	.cost {
+		font-size: 21px;
+	}
+}
+
+@media (max-width: 710px) {
+	.page {
+		flex-direction: column;
+	}
+
+	.element {
+		width: 100%;
+	}
+}

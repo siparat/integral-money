@@ -1,0 +1,17 @@
+.overlay {
+	position: fixed;
+	width: 100vw;
+	background: rgba(0, 0, 0, .4);
+	inset: 0;
+	z-index: 1000;
+}
+
+.menu {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	width: 70%;
+	background: #222237;
+	padding-top: 40px;
+}

@@ -14,3 +14,14 @@
 	font-size: 33px;
 	font-weight: 400;
 }
+
+@media (max-width: 1300px) {
+	.formCard {
+		padding: 30px;
+		max-width: 350px;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+}

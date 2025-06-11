@@ -7,3 +7,9 @@
 	height: 100%;
 	padding-block: 70px;
 }
+
+@media (max-width: 1300px) {
+	.authPage {
+		padding-block: 30px;
+	}
+}

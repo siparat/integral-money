@@ -27,3 +27,10 @@
 .content {
 	flex: 1;
 }
+
+@media (max-width: 1300px) {
+	.container {
+		padding-inline: 30px;
+	}
+	
+}

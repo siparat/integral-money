@@ -7,8 +7,33 @@
     padding-inline: 40px;
 }
 
-
 .logo {
 	width: auto;
 	flex-shrink: 0;
+}
+
+.burgerButton {
+	max-width: 30px;
+	max-height: 30px;
+	display: none;
+}
+
+.burgerButton svg {
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 1300px) {
+	.logo {
+		height: 70px;
+	}
+}
+
+@media (max-width: 1100px) {
+	.burgerButton {
+		display: block;
+	}
+	menu.headerMenu, ul.headerActions {
+		display: none;
+	}
 }

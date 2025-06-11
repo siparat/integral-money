@@ -9,3 +9,32 @@
 	font-size: 18px;
 	font-weight: 400;
 }
+
+@media (max-width: 1300px) {
+	.menu ul {
+		gap: 20px;
+	}
+	
+	.link {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 1100px) {
+	.link {
+		font-size: 24px;
+	}
+	.menu ul {
+		gap: 40px;
+		flex-direction: column;
+	}
+	.link {
+		color: #fff !important
+	}
+}
+
+@media (max-width: 500px) {
+	.link {
+		font-size: 19px;
+	}
+}
