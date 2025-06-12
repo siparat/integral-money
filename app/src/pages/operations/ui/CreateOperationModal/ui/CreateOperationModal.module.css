@@ -1,0 +1,65 @@
+.content {
+	max-width: 300px;
+}
+
+.title {
+	font-size: 21px;
+	font-weight: 400;
+	color: var(--primary);
+}
+
+.form {
+	margin-top: 10px;
+}
+
+.inputTitle {
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--primary-light);
+	width: 100%;
+}
+
+.element {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.button {
+	max-width: 240px;
+	width: 100%;
+	margin: 21px auto 0;
+	display: block;
+	padding-block: 12px;
+	font-size: 21px;
+}
+
+.error {
+	font-size: 16px;
+	font-weight: 400;
+	color: red;
+	margin-top: 5px;
+}
+
+.amountInput, .dateInput, .categorySelect {
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--primary-light);
+	width: 100%;
+	border: 1px solid var(--primary-light);
+	margin-top: 10px;
+	padding: 5px;
+	outline: none;
+}
+
+:root[data-theme="dark"] .amountInput, .dateInput, .categorySelect {
+	background: none;
+	border-color: #C8D9FF;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'%3E%3Cpath fill='WindowText' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z' style='&%2310; fill: %23C8D9FF;&%2310;'/%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3C/svg%3E");
+}
+
+.amountInput::-webkit-inner-spin-button {
+	display: none;
+}

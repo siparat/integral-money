@@ -1,0 +1,39 @@
+.actions {
+	display: flex;
+	align-items: center;
+	gap: 45px;
+}
+
+.actions li > * {
+	color: var(--primary);
+	font-size: 18px;
+	font-weight: 400;
+}
+
+@media (max-width: 1300px) {
+	.actions {
+		gap: 20px;
+	}
+	.actions li > * {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 1100px) {
+	.actions {
+		flex-direction: column;
+		margin-top: 40px;
+		gap: 40px;
+	}
+
+	.actions li > * {
+		font-size: 24px;
+		color: #fff !important
+	}
+}
+
+@media (max-width: 500px) {
+	.actions li > * {
+		font-size: 19px;
+	}
+}

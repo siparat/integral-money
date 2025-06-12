@@ -1,0 +1,27 @@
+.formCard {
+	padding: 50px;
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, .25);
+	border-radius: 25px;
+	max-width: 550px;
+	width: 100%;
+}
+
+:root[data-theme="dark"] .formCard {
+	box-shadow: 0px 0px 7px #C8D9FF
+}
+
+.title {
+	font-size: 33px;
+	font-weight: 400;
+}
+
+@media (max-width: 1300px) {
+	.formCard {
+		padding: 30px;
+		max-width: 350px;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+}

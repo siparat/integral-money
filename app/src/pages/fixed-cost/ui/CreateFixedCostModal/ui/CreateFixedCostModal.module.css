@@ -1,0 +1,59 @@
+.content {
+	max-width: 412px;
+}
+
+.title {
+	font-size: 21px;
+	font-weight: 400;
+	color: var(--primary);
+}
+
+.inputTitle {
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--primary-light);
+	width: 100%;
+}
+
+.openButton {
+	width: 100%;
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--gray);
+	border-block: 1px solid var(--primary-light);
+	border-inline: none;
+	padding-block: 5px;
+	margin-top: 5px;
+	cursor: pointer;
+	appearance: none;
+	background: none;
+	outline: none;
+}
+
+input.openButton[type="date"]::-webkit-calendar-picker-indicator {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'%3E%3Cpath fill='WindowText' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z' style='&%2310; fill: %23C8D9FF;&%2310;'/%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3C/svg%3E");
+}
+
+.element {
+	width: 100%;
+	margin-top: 5px;
+}
+
+.element:first-of-type {
+	margin-top: 10px;
+}
+
+.button {
+	max-width: 240px;
+	margin: 21px auto 0;
+	display: block;
+	padding: 12px 48px;
+	font-size: 21px;
+}
+
+.error {
+	font-size: 16px;
+	font-weight: 400;
+	color: red;
+	margin-top: 5px;
+}

@@ -1,0 +1,149 @@
+:root {
+	--primary: #121E6C;
+	--primary-light: #0F5BFF;
+	--secondary: #C8D9FF;
+	--gray: #666666;
+}
+
+:root[data-theme="dark"] {
+	--primary: #ffffff;
+	--primary-light: #ffffff;
+	--secondary: #3544A4;
+	--gray: #888888;
+}
+
+:root[data-theme="dark"] body {
+	background: #222237;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	color: var(--primary)
+}
+
+body {
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+
+fieldset {
+	all: unset;
+}
+
+:root[data-theme="dark"] .dialogContent {
+	background-color: #222237;
+}
+
+:root[data-theme="dark"] .rdrDateInput {
+	background: none;
+}
+
+:root[data-theme="dark"] .rdrCalendarWrapper {
+	background: #222237;
+}
+
+:root[data-theme="dark"] .rdrDateDisplayWrapper {
+	background: #25253d
+}
+
+:root[data-theme="dark"] .rdrDateDisplayItemActive {
+	border-color: #C8D9FF;
+}
+
+
+:root[data-theme="dark"] .rdrNextPrevButton, :root[data-theme="dark"] .rdrPprevButton {
+	background: #C8D9FF;
+}
+
+:root[data-theme="dark"] .rdrMonthAndYearPickers select {
+	color: var(--gray);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9px' height='6px' viewBox='0 0 9 6' version='1.1'%3E%3Cg id='Artboard' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate(-636.000000, -171.000000)' fill-opacity='0.368716033'%3E%3Cg id='input' transform='translate(172.000000, 37.000000)' fill='%230E242F' fill-rule='nonzero' style='&%2310; fill: %23888888;&%2310;'%3E%3Cg id='Group-9' transform='translate(323.000000, 127.000000)'%3E%3Cpath d='M142.280245,7.23952813 C141.987305,6.92353472 141.512432,6.92361662 141.219585,7.23971106 C140.926739,7.5558055 140.926815,8.06821394 141.219755,8.38420735 L145.498801,13 L149.780245,8.38162071 C150.073185,8.0656273 150.073261,7.55321886 149.780415,7.23712442 C149.487568,6.92102998 149.012695,6.92094808 148.719755,7.23694149 L145.498801,10.7113732 L142.280245,7.23952813 Z' id='arrow'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+:root[data-theme="dark"] .rdrDayToday .rdrDayNumber span:after, :root[data-theme="dark"] .rdrEndEdge, :root[data-theme="dark"] .rdrStartEdge, :root[data-theme="dark"] .rdrInRange {
+	background: #C8D9FF !important;
+}
+
+:root[data-theme="dark"] .rdrDayNumber span {
+	color: #C8D9FF !important;
+}
+
+:root[data-theme="dark"] span.rdrInRange ~ .rdrDayNumber span, :root[data-theme="dark"] span.rdrStartEdge ~ .rdrDayNumber span, :root[data-theme="dark"] span.rdrEndEdge ~ .rdrDayNumber span {
+	color: black !important;
+}
+
+:root[data-theme="dark"] .recharts-default-tooltip {
+	background: #222237 !important;
+}
+
+.rdrDateDisplay {
+	color: var(--primary-light) !important;
+}
+
+.rdrDayToday .rdrDayNumber span:after, .rdrEndEdge, .rdrStartEdge, .rdrInRange {
+	background: var(--primary-light) !important;
+}
+
+.dialogOverlay {
+	background-color: rgba(0, 0, 0, .3);
+	position: fixed;
+	inset: 0;
+	animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialogContent {
+	background-color: #ffffff;
+	border-radius: 16px;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, .25);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90vw;
+	max-width: 500px;
+	max-height: 85vh;
+	padding: 30px;
+	animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialogContent:focus {
+	outline: none;
+}
+
+@keyframes overlayShow {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes contentShow {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -48%) scale(0.96);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}

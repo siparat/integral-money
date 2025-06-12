@@ -1,0 +1,82 @@
+.card {
+	width: 100%;
+	background: white;
+	box-shadow: 0px 4px 4px rgba(0,0,0,.25);
+	border: 1px solid var(--secondary);
+	padding: 31px 35px;
+	border-radius: 30px;
+	position: relative;
+	display: flex;
+	gap: 30px;
+}
+
+:root[data-theme="dark"] .card {
+	box-shadow: 0px 4px 4px rgba(15,91,255,.5);
+	background: #222237;
+	border-color: #C8D9FF;
+}
+
+:root[data-theme="dark"] .title {
+	color: var(--primary);
+}
+
+.title {
+	font-size: 31px;
+	color: #0F5BFF;
+	font-weight: 400;
+}
+
+.description {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+}
+
+.description p {
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--gray);
+}
+
+.description p span {
+	margin-left: 15px;
+	color: inherit;
+}
+
+.deleteButton {
+	position: absolute;
+	top: 15px;
+	right: 50px;
+}
+
+@media (max-width: 1300px) {
+	.description {
+		gap: 10px;
+	}
+	.title {
+		font-size: 21px;
+	}
+	.card {
+		padding: 20px 25px;
+		border-radius: 19px;
+	}
+	.description p span {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 1000px) {
+	.card {
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+
+@media (max-width: 640px) {
+	.title {
+		font-size: 16px;
+	}
+	.description p {
+		font-size: 12px;
+	}
+}
